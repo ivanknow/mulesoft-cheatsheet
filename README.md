@@ -1,7 +1,26 @@
 # mulesoft-cheatsheet
-All that mulesoft stuff that I use and forget daily
+* Get a Query Parameter:
+```javascript
+%dw 2.0
+output application/json
+import * from dw::util::Values
+var queryParams = attributes.queryParams
+---
+queryParams.<paramName>
 
-get query param
+```
+
+* Get a URI Parameter
+
+```javascript
+%dw 2.0
+output application/json
+var uriParams = attributes.uriParams
+---
+uriParams.<paramName>
+
+
+```
 
 get uri param
 
