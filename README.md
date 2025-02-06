@@ -42,6 +42,17 @@ var originalPayload = payload
 originalPayload - "propertyName"
 
 ```
+* Match command
+
+ ```javascript
+value match {
+  case (<name>:) <condition> -> <routing expression>
+  case (<name>:) <condition> -> <routing expression>
+  else -> <when none of them matched>
+}
+
+
+```
 
 format date
 
