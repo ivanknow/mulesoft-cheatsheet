@@ -22,11 +22,26 @@ uriParams.<paramName>
 
 ```
 
-get uri param
+* Add a Property to a Payload:
+  
+```javascript
+%dw 2.0
+output application/json
+var originalPayload = payload
+---
+originalPayload ++ { newProperty: "value" }
 
-add properties to payload
+```
 
-remove payload property
+* Remove a Property from a Payload:
+ ```javascript
+%dw 2.0
+output application/json
+var originalPayload = payload
+---
+originalPayload - "propertyName"
+
+```
 
 format date
 
