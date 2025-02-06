@@ -1,16 +1,16 @@
 * map
-´´´javascript
+```javascript
 
 %dw 2.0
 output application/json
 ---
 ["jose", "pedro", "mateo"] map (value, index) -> { (index) : value}
 
-´´´
+```
 
 * reduce
 
-´´´j́avascript
+```j́avascript
 
 %dw 2.0
 var myNums = [1,2,3,4]
@@ -22,4 +22,4 @@ output application/json
    "concat" : myNums reduce ($$ ++ $),
    "emptyList" : myEmptyList reduce ($$ ++ $)
 }
-´´´
+```
