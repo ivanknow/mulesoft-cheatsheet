@@ -25,5 +25,20 @@ output application/json
    "sum" : myNums reduce ($$ + $),
    "concat" : myNums reduce ($$ ++ $),
    "emptyList" : myEmptyList reduce ($$ ++ $)
-}
+} 
+```
+* mapObject
+
+```j́avascript
+%dw 2.0
+output application/json
+---
+{"a":"b","c":"d"} mapObject (value,key,index) -> { (index) : { (value):key} }
+```
+* sizeOf
+```j́avascript
+%dw 2.0
+output application/json
+---
+sizeOf([ "a", "b", "c"])
 ```
